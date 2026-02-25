@@ -1,5 +1,5 @@
-balance=0
-add_history=[]
+balance=0   #余额
+add_history=[]   #历史记录
 def history_list(amount):
     global add_history
     add_history.append(amount)
@@ -19,9 +19,7 @@ while True:
             if not add_history:
                 print('无历史记录')
             else:
-                print('历史记录：')
-                for i, amount in enumerate(add_history, 1):
-                    print(f'{i},{amount}')
+                print('历史记录:',add_history)
             return None
         print_history()
     elif choice=='4':
